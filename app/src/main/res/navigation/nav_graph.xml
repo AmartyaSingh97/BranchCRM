@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.branchcrm.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_threadListFragment"
+            app:destination="@id/threadListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/threadListFragment"
+        android:name="com.example.branchcrm.fragments.ThreadListFragment"
+        android:label="fragment_chat_list"
+        tools:layout="@layout/fragment_chat_list" >
+        <action
+            android:id="@+id/action_threadListFragment_to_threadDetailsFragment"
+            app:destination="@id/threadDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/threadDetailsFragment"
+        android:name="com.example.branchcrm.fragments.ThreadDetailsFragment"
+        android:label="fragment_thread_details"
+        tools:layout="@layout/fragment_thread_details" >
+        <action
+            android:id="@+id/action_threadDetailsFragment_to_threadListFragment"
+            app:destination="@id/threadListFragment" />
+    </fragment>
+</navigation>
